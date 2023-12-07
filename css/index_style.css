@@ -1,0 +1,1068 @@
+@font-face{
+    font-family : "Tahoma";
+    src : url("font/Tahoma-Regular.ttf") format("Truetype");
+
+    font-family : "Arcade Interlaced";
+    src : url("font/ARCADE.ttf") format("Truetype");
+
+    font-family : "Poppins";
+    src : url("font/Poppins-Regular.ttf") format("Truetype");
+
+    font-family : "Roboto";
+    src : url("font/Roboto-Regular.ttf") format("Truetype");
+
+    font-family : "Poppins Black";
+    src : url("font/Poppins-Black.ttf") format("Truetype");
+}
+
+@media screen and (max-width: 450px){
+    #page1{
+        height: 100vh;
+    }
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior : smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: inherit
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    position: relative;
+    z-index: 100;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.9;
+}
+
+#langue{
+    position : absolute ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    height: 100%;
+}
+
+
+#menu{
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#placement_bouton_remonte{
+    position: fixed;
+    top: 86%;
+    left: 92%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+}
+
+#bouton_remonte{
+    transform: rotate(-90deg);
+    background-color: #000;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+#texte_bouton_remonte{
+    position: absolute;
+    color: #fff;
+    font-size: 80px;
+    font-family: "Poppins";
+    font-weight: bold;
+    z-index: 101;
+    top: -11px;
+    left: 27px;
+    transform: rotate(-90deg);
+    transition: 0.2s ease-in-out;
+}
+                    /* CSS PAGE 1 : Page Accueil */
+#page1{
+    height: 100vh;
+    width: 100%;
+    background: #f1f1f1;
+}
+
+#placement_page1{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 14%;
+}
+
+.item{
+    margin: 0 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    font-family: "Poppins";
+    transition: 0.3s ease-in-out;
+    animation: anim_bouton_accueil 1s ease-in-out;
+}
+
+@keyframes anim_bouton_accueil {
+    0%{
+        opacity: 0;
+        margin: 0 80px;
+    }
+    100%{
+        opacity: 1;
+        margin: 0 20px;
+    }
+    
+}
+
+.item:hover{
+    font-size: 30px;
+}
+
+#placement_bouton_cv{
+    position: relative;
+    top: 33%;
+    animation: anim_bouton_cv 1s ease-in-out;
+}
+
+@keyframes anim_bouton_cv {
+    0%{
+        opacity: 0;
+        top:50%
+    }
+    100%{
+        opacity: 1;
+        top:33%;
+    }
+}
+
+.bouton{
+    text-decoration: none;
+    position: relative;
+}
+
+#bouton_cv{
+    color:#000;
+}
+
+#text_bouton{
+    font-family: "Poppins";
+    font-size: 25px;
+    margin: 13px;
+}
+
+#bouton_cv::after, #bouton_cv::before{
+    content: "";
+    border: 2px solid #000;
+    border-radius: 15px;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    left: 0;
+    bottom: 0;
+    top: -12px;
+    transition: transform 0.3s ease;
+}
+
+#bouton_cv:hover::after{
+    transform: translate(-5px, -5px);
+}
+
+#bouton_cv:hover::before{
+    transform: translate(5px, 5px);
+}
+
+#img_accueil{
+    position: relative;
+    width: 43%;
+    height: auto;
+    left: 53%;
+    top: 0%;
+    animation: anim_img 1s ease-in-out;
+}
+
+@keyframes anim_img {
+    0%{
+        opacity: 0;
+        left: 67%;
+    }
+    100%{
+        opacity: 1;
+        left: 53%;
+    }
+}
+
+.icone {
+    position: relative;
+    top: 30%;
+}
+
+.icone path:nth-child(1) {
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation: anim 5s ease forwards;
+}
+
+@keyframes anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#placement_scroll_bouton{
+    animation: anim_scroll_boutton 1s ease-in-out;
+}
+
+@keyframes anim_scroll_boutton{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.scroll_down{
+	width : 30px;
+	height : 50px;
+	border : 2px solid #000;
+	position : absolute;
+	left : 50%;
+	bottom: -45px;
+	border-radius : 50px;
+	cursor : pointer;
+}
+
+.scroll_down::before, .scroll_down::after{
+	content : '';
+	position : absolute;
+	top : 20%;
+	left: 50%;
+	border: 2px solid #000;
+	width : 10px;
+	height : 10px;
+	transform: translate(-50%, -100%) rotate(45deg);
+	border-top: transparent;
+	border-left: transparent;
+	animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll_down::after{
+	top : 30;
+	animation-delay : .3s;
+}
+
+@keyframes scroll-down{
+	0%{
+		opacity : 0;
+	}
+	30%{
+		opacity : 1;
+	}
+	60%{
+		opacity : 1;
+	}
+	100%{
+		opacity : 0;
+		top: 90%;
+    }
+}
+
+                    /* CSS PAGE 2 : Page à propos */
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+#placement_page2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 41%;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img_moi{
+    width: 285px;
+    height: 354px;
+    transform: translateX(-720px);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+.img_moi.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+#zone_texte{
+    position: relative;
+    width: 50%;
+    height: 80%;
+    left : 2%;
+}
+
+.titre_page2{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 5%;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 1s ease-in-out;
+}
+
+.titre_page2.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.texte_page2{
+    font-family: "Poppins";
+    font-size: 20px;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 1s ease-in-out;
+}
+
+.texte_page2.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+                    /* CSS PAGE 3 : Page Compétence */
+
+#page3{
+    height: 120vh;
+    width: 100%;
+    background: #f1f1f1;
+}
+
+#placement_page3{
+    position: relative;
+    width: 93%;
+    height: 80%;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.titre_page3{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 5%;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+    text-align: center;
+}
+
+.titre_page3.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.placement_competence_programmation{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14%;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: transform 1s ease-in-out,
+    opacity 1s ease-in-out;
+}
+
+.placement_competence_programmation.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.pourcentage{
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 30px;
+    font-weight: bold;
+    top: -40%;
+    height: 0px;
+}
+
+.text_competence{
+    font-family: "Poppins";
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+    box-shadow: 10px 10px #000;
+    background-color: #fff;
+}
+.rect_css:hover{
+    background-color: #28a9df;
+    color: #fff;
+}
+
+.rect_html:hover{
+    background-color: #ed662a;
+    color: #fff;
+}
+
+.rect_js:hover{
+    background-color: #89bc26;
+    color: #fff;
+}
+
+.rect_php:hover{
+    background-color: #7c89c2;
+    color: #fff;
+}
+
+.rect_python:hover{
+    background-color: #ffc100;
+    color: #fff;
+}
+
+hr{
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10%
+}
+
+.placement_competence_com{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: transform 1.5s ease-in-out,
+    opacity 1.5s ease-in-out;
+}
+.placement_competence_com.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.rect_xd:hover{
+    background-color: #fd60f4;
+    color: #fff;
+}
+
+.rect_premiere:hover{
+    background-color: #9797fd;
+    color: #fff;
+}
+
+.rect_lightroom:hover{
+    background-color: #31a8ff;
+    color: #fff;
+}
+
+.rect_photoshop:hover{
+    background-color: #001e36;
+    color: #fff;
+}
+
+                    /* CSS PAGE 4 : Page Réalisation */
+#page4{
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+.retourne{
+    position: relative;
+}
+
+.titre_page4{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 5%;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out,
+    opacity 0.8s ease-in-out;
+    text-align: center;
+}
+
+.titre_page4.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.zone_slider{
+    position: relative;
+    width: 80%;
+    height: 49%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out,
+    opacity 0.8s ease-in-out;
+}
+
+.zone_slider.active{
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+.theatre_img{
+    position: absolute;
+    width: 17%;
+    height: auto;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(44%);
+    top: 3%;
+    filter: blur(3px);
+    cursor : pointer;
+    transition: transform 0.6s ease-in-out,
+                width 0.6s ease-in-out
+}
+
+.theatre_img:hover{
+    filter: blur(0px);
+    width: 25%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.burn_img{
+    width: 20%;
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: -3%;
+    transform: translateX(-50%);
+    filter: blur(3px);
+    cursor : pointer;
+    transition: transform 0.6s ease-in-out,
+                width 0.6s ease-in-out
+}
+
+.burn_img:hover{
+    filter: blur(0px);
+    width: 30%;
+    z-index: 5;
+}
+
+.melies{
+    position: absolute;
+    width: 42%;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-75%);
+    top: 4%;
+    filter: blur(3px);
+    cursor : pointer;
+    transition: transform 0.6s ease-in-out,
+                width 0.6s ease-in-out
+}
+
+.melies:hover{
+    filter: blur(0px);
+    width: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+
+.img_2048{
+    position: absolute;
+    width: 17%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-259%);
+    z-index: 1;
+    filter: blur(3px);
+    cursor : pointer;
+    transition: transform 1s ease-in-out,
+                width 1s ease-in-out
+}
+.img_2048:hover{
+    filter: blur(0px);
+    width: 25%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+
+.mha_img{
+    position: absolute;
+    width: 17%;
+    height: auto;
+    left: 50%;
+    transform: translateX(100%);
+    z-index: 1;
+    filter: blur(3px);
+    cursor : pointer;
+    transition: transform 1s ease-in-out,
+                width 1s ease-in-out
+}
+.mha_img:hover{
+    filter: blur(0px);
+    width: 25%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+#page_burn{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("background/background_burn.jpg");
+    background-size: cover;
+    z-index: 100;
+    margin-top:15%;
+    transition: display 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+.text_general_burn{
+    color: #fff;
+    font-family : "Poppins";
+    font-size: 16px;
+}
+
+.titre_general_burn{
+    color: #fff;
+    font-family: "Arcade Interlaced";
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#retour_burn{
+    width: 45px;
+    position: relative;
+    left: 91%;
+    top: 3%;
+    font-size: 50px;
+    color: #fff;
+    font-family: "Arcade Interlaced";
+    cursor: pointer;
+}
+#zone_page_burn{
+    position: relative;
+    width: 52%;
+    height: 100%;
+    background-color: #000000;
+    left: 48%;
+}
+
+#zone_titre_page_burn{
+    position: relative;
+    width: 80%;
+    height: 38%;
+    left: 10%;
+    top: 5%;
+}
+
+#titre_page_burn{
+    position: absolute;
+    font-family : "Arcade Interlaced";
+    font-size: 40px;
+    color: #fff;
+    z-index: 1;
+}
+
+#video_burn{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: -15%;
+    top: -7%;
+}
+#zone1_text_page_burn{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 14%;
+    left: 10%;
+    top: 3%;
+}
+
+#zone2_text_page_burn{
+    position: relative;
+    width: 80%;
+    height: 35%;
+    left: 10%;
+    top: 3%;
+}
+
+#page_theatre{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #0b449d, #000);
+    background-size: cover;
+    z-index: 100;
+    margin-top:15%;
+    transition: display 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+.retour{
+    width: 45px;
+    position: relative;
+    left: 95%;
+    top: 3%;
+    font-size: 50px;
+    font-family: "Poppins";
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#couleur_retour_theatre{
+    color: #fff;
+}
+
+#container_page_theatre{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    height: 85%;
+    left: 20%;
+}
+
+#img_page_theatre{
+    box-shadow: 10px 10px 10px;
+    border-radius: 15px;
+}
+
+#zone_text_page_theatre{
+    width: 45%;
+    height: 80%;
+    border: 1px solid #000;
+    border-radius: 15px;
+    background-color: #0b449d;
+    box-shadow: 10px 10px 10px 0px;
+}
+
+#zone_titre_page_theatre{
+    position: relative;
+    width: 80%;
+    height: 17%;
+    left: 5%;
+    top: 5%;
+}
+
+#titre_principal_theatre{
+    font-family: "Poppins Black";
+    font-size: 25px;
+    color: #012041;
+}
+
+#zone_text_flex_page_theatre{
+    position : relative;
+    display : flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 17%;
+    left: 5%;
+    top: 5%;
+}
+
+.titre_general_page_theatre{
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: bold;
+    color: #012041;
+}
+
+.text_general_page_theatre{
+    font-family: "Poppins";
+    font-size: 16px;
+    color: #e8c400;
+}
+
+#zone2_text_page_theatre{
+    position : relative;
+    width: 80%;
+    height: 15%;
+    left: 5%;
+    top: 5%;
+}
+
+#page_melies{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f2fae3;
+    background-size: cover;
+    z-index: 100;
+    margin-top:15%;
+    transition: display 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+#couleur_retour_melies{
+    color: #fff;
+}
+
+#container_page_melies{
+    position: relative;
+    width: 75%;
+    height: 85%;
+    left: 10%;
+    text-align: center;
+}
+
+#page_2048{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #bbada0;
+    background-size: cover;
+    z-index: 100;
+    margin-top:15%;
+    transition: display 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+#container_page_2048{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    height: 85%;
+    left: 20%;
+}
+
+#img_page_2048{
+    box-shadow: 10px 10px 10px;
+    border-radius: 15px;
+}
+
+#zone_text_page_2048{
+    width: 48%;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 15px;
+    background-color: #cdc0b4;
+    box-shadow: 10px 10px 10px 0px;
+}
+
+#zone_titre_principal_page_2048{
+    position: relative;
+    width: 85%;
+    height: 10%;
+    left: 5%;
+    top: 5%;
+}
+
+#titre_principal_2048{
+    font-family : "Arcade Interlaced";
+    font-size: 40px;
+    color: #fff;
+}
+
+#video_jeu2048{
+    position: relative;
+    border: 1px solid #fff;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+}
+
+#zone1_text_page_2048{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    height: 5%;
+    left: 4%;
+    top: 9%;
+}
+
+.text_general_2048{
+    color: #fff;
+    font-family : "Poppins";
+    font-size: 12px;
+}
+
+.titre_general_2048{
+    color: #fff;
+    font-family: "Arcade Interlaced";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#zone2_text_page_2048{
+    position: relative;
+    width: 80%;
+    height: 35%;
+    left: 10%;
+    top: 13%;
+}
+
+                    /* CSS PAGE 5 : Page Projet Pro */
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#fff, #000);
+}
+
+.titre_page5{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 5%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    text-align: center;
+}
+
+.titre_page5.active{
+    opacity: 1;
+}
+
+.placement_text_projetpro{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.titre_projetpro{
+    font-family: "Poppins Black";
+    font-size: 40px;
+    color: #fff;
+
+}
+
+#container_page5{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 80%;
+    top: 5%;
+}
+
+.zone_projet_pro_prog{
+    position: relative;
+    width: 40%;
+    height: 80%;
+    left: 12%;
+    top: 5%;
+    border: 0px solid #000;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px;
+    transform: translateX(-260px);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+.zone_projet_pro_prog.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.zone_projet_pro_prog:hover{
+    background-image: url("background/programmation.jpg");
+    background-size: cover;
+}
+
+.zone_projet_pro_com{
+    position: relative;
+    width: 40%;
+    height: 80%;
+    left: 12%;
+    top: 5%;
+    border: 0px solid #000;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px;
+    transform: translateX(260px);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+.zone_projet_pro_com.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.zone_projet_pro_com:hover{
+    background-image: url("background/motion_designer.png");
+    background-size: cover;
+}
+
+                    /* CSS FOOTER */
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+}
+
+.item_footer{
+    margin: 0 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+    animation: anim_bouton_accueil 1s ease-in-out;
+}
+
+.item_footer:hover{
+    font-size: 45px;
+}
+
+#copie_mail{
+    background-color: #000;
+    cursor:default;
+}
+
+#copie_tel{
+    background-color: #000;
+    cursor:default;
+}

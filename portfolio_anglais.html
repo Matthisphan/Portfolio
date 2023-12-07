@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Phan Matthis</title>
+</head>
+
+<body>  
+    <header>
+        <nav>
+            <div id="langue">
+                <a href="index.html">
+                    <p class="item">Fr</p>
+                </a>
+            </div>
+
+            <ul id="menu">
+                <a onclick="retour()" href="#page2">
+                    <li class="item">About</li>
+                </a>
+                <a onclick="retour()" href="#page3">
+                    <li class="item">Skills</li>
+                </a>
+                <a onclick="retour()" href="#page4">
+                    <li class="item">Projects</li>
+                </a>
+                <a onclick="retour()" href="#page5">
+                    <li class="item">professional Way</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="placement_bouton_remonte">
+        <a onclick="retour()" href="#page1">
+            <p id="texte_bouton_remonte">></p>
+            <div id="bouton_remonte"></div>
+        </a>
+    </div>
+
+    <section id="page1">
+        <article id="placement_page1">
+            <svg class="icone" width="706" height="74" viewBox="0 0 706 74" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.23047 1.90625H12.3613L35.6523 59.8652L58.8945 1.90625H68.0742L39.168 73H32.0391L3.23047 1.90625ZM0.251953 1.90625H8.30859L9.62695 45.2656V73H0.251953V1.90625ZM62.9473 1.90625H71.0039V73H61.6289V45.2656L62.9473 1.90625ZM114.754 8.20508L91.2188 73H81.5996L108.699 1.90625H114.9L114.754 8.20508ZM134.48 73L110.896 8.20508L110.75 1.90625H116.951L144.148 73H134.48ZM133.26 46.6816V54.3965H93.3184V46.6816H133.26ZM173.592 1.90625V73H164.314V1.90625H173.592ZM196.443 1.90625V9.62109H141.512V1.90625H196.443ZM234.041 1.90625V73H224.764V1.90625H234.041ZM256.893 1.90625V9.62109H201.961V1.90625H256.893ZM313.875 32.4727V40.1387H275.398V32.4727H313.875ZM276.863 1.90625V73H267.439V1.90625H276.863ZM322.078 1.90625V73H312.703V1.90625H322.078ZM348.934 1.90625V73H339.51V1.90625H348.934ZM403.963 55.0312C403.963 53.3711 403.702 51.9062 403.182 50.6367C402.693 49.3346 401.814 48.1628 400.545 47.1211C399.308 46.0794 397.583 45.0866 395.369 44.1426C393.188 43.1986 390.421 42.2383 387.068 41.2617C383.553 40.2201 380.379 39.0645 377.547 37.7949C374.715 36.4928 372.29 35.0117 370.271 33.3516C368.253 31.6914 366.707 29.7871 365.633 27.6387C364.559 25.4902 364.021 23.0326 364.021 20.2656C364.021 17.4987 364.591 14.9434 365.73 12.5996C366.87 10.2559 368.497 8.22135 370.613 6.49609C372.762 4.73828 375.317 3.37109 378.279 2.39453C381.242 1.41797 384.546 0.929688 388.191 0.929688C393.53 0.929688 398.055 1.95508 401.766 4.00586C405.509 6.02409 408.357 8.67708 410.311 11.9648C412.264 15.2201 413.24 18.7031 413.24 22.4141H403.865C403.865 19.7448 403.296 17.3848 402.156 15.334C401.017 13.2507 399.292 11.623 396.98 10.4512C394.669 9.24674 391.74 8.64453 388.191 8.64453C384.839 8.64453 382.072 9.14909 379.891 10.1582C377.71 11.1673 376.082 12.5345 375.008 14.2598C373.966 15.985 373.445 17.9544 373.445 20.168C373.445 21.6654 373.755 23.0326 374.373 24.2695C375.024 25.474 376.017 26.597 377.352 27.6387C378.719 28.6803 380.444 29.6406 382.527 30.5195C384.643 31.3984 387.166 32.2448 390.096 33.0586C394.132 34.1979 397.615 35.4674 400.545 36.8672C403.475 38.2669 405.883 39.8457 407.771 41.6035C409.692 43.3288 411.108 45.2982 412.02 47.5117C412.964 49.6927 413.436 52.1667 413.436 54.9336C413.436 57.8307 412.85 60.4512 411.678 62.7949C410.506 65.1387 408.829 67.1406 406.648 68.8008C404.467 70.4609 401.847 71.7467 398.787 72.6582C395.76 73.5371 392.374 73.9766 388.631 73.9766C385.343 73.9766 382.104 73.5208 378.914 72.6094C375.757 71.6979 372.876 70.3307 370.271 68.5078C367.7 66.6849 365.633 64.4388 364.07 61.7695C362.54 59.0677 361.775 55.9427 361.775 52.3945H371.15C371.15 54.8359 371.622 56.9355 372.566 58.6934C373.51 60.4186 374.796 61.8509 376.424 62.9902C378.084 64.1296 379.956 64.9759 382.039 65.5293C384.155 66.0501 386.352 66.3105 388.631 66.3105C391.919 66.3105 394.702 65.8548 396.98 64.9434C399.259 64.0319 400.984 62.7298 402.156 61.0371C403.361 59.3444 403.963 57.3424 403.963 55.0312ZM476.473 45.1191H457.479V37.4531H476.473C480.151 37.4531 483.13 36.8672 485.408 35.6953C487.687 34.5234 489.347 32.8958 490.389 30.8125C491.463 28.7292 492 26.3529 492 23.6836C492 21.2422 491.463 18.9473 490.389 16.7988C489.347 14.6504 487.687 12.9251 485.408 11.623C483.13 10.2884 480.151 9.62109 476.473 9.62109H459.676V73H450.252V1.90625H476.473C481.844 1.90625 486.385 2.83398 490.096 4.68945C493.807 6.54492 496.622 9.11654 498.543 12.4043C500.464 15.6595 501.424 19.3867 501.424 23.5859C501.424 28.1432 500.464 32.0332 498.543 35.2559C496.622 38.4785 493.807 40.9362 490.096 42.6289C486.385 44.2891 481.844 45.1191 476.473 45.1191ZM559.773 32.4727V40.1387H521.297V32.4727H559.773ZM522.762 1.90625V73H513.338V1.90625H522.762ZM567.977 1.90625V73H558.602V1.90625H567.977ZM611.922 8.20508L588.387 73H578.768L605.867 1.90625H612.068L611.922 8.20508ZM631.648 73L608.064 8.20508L607.918 1.90625H614.119L641.316 73H631.648ZM630.428 46.6816V54.3965H590.486V46.6816H630.428ZM705.525 1.90625V73H696.053L660.262 18.166V73H650.838V1.90625H660.262L696.199 56.8867V1.90625H705.525Z" fill="none" stroke="black"/>
+            </svg>
+    
+            <div id="placement_bouton_cv">
+                <a class="bouton" id="bouton_cv" href="ressource/cv_matthis_phan.pdf" download="CV Matthis Phan">
+                    <span id="text_bouton">My CV</span>
+                </a>
+            </div>
+
+            <div id="placement_scroll_bouton">
+                <a href="#page2">
+                    <section class="scroll_down"></section>
+                </a>
+            </div>
+
+            <img id="img_accueil" src="ressource/image_acceuil.png">
+        </article>
+    </section>
+
+    <section id="page2">
+        <article id="placement_page2">
+            <img class="img_moi" src="ressource/moi.png">
+
+            <div id="zone_texte">
+                <h1 class="titre_page2">Who I'am ? 😊</h1>
+                <p class="texte_page2">I am Matthis Phan, a 19 years old student in my first year of « BUT MMI » in the city of Meaux. I am studying internet jobs so i can do a bunch of stuff from communication to programmation.
+                    <br><br>I am using my knowledge to create websites, to edit videos for my social medias or for more serious projects.
+                    <br><br>Moreover, I like to program softwares and games, take good pictures and edit them to post them on my social medias.	
+                </p>
+            </div>
+        </article>
+    </section>.
+    
+    <section id="page3">
+        <h1 class="titre_page3">Skills 😎</h1>
+        <article id="placement_page3">
+            <div class="placement_competence_programmation">
+                <div>
+                    <p class="text_competence rect_css">CSS</p>
+                    <p class="pourcentage">80%</p>
+                </div>
+
+                <div>
+                    <p class="text_competence rect_html">HTML</p>
+                    <p class="pourcentage">80%</p>
+                </div>
+                
+                <div>
+                    <p class="text_competence rect_python">PYTHON</p>
+                    <p class="pourcentage">70%</p>
+                </div>
+
+                <div>
+                    <p class="text_competence rect_js">JAVASCRIPT</p>
+                    <p class="pourcentage">70%</p>
+                </div>
+                
+                <div>
+                    <p class="text_competence rect_php">PHP</p>
+                    <p class="pourcentage">70%</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="placement_competence_com">
+                <div>
+                    <p class="text_competence rect_xd">ADOBE XD</p>
+                    <p class="pourcentage">90%</p>
+                </div>
+
+                <div>
+                    <p class="text_competence rect_premiere">PREMIÈRE PRO</p>
+                    <p class="pourcentage">90%</p>
+                </div>
+                
+                <div>
+                    <p class="text_competence rect_lightroom">LIGHTROOM</p>
+                    <p class="pourcentage">80%</p>
+                </div>
+
+                <div>
+                    <p class="text_competence rect_photoshop">PHOTOSHOP</p>
+                    <p class="pourcentage">70%</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="page4">
+
+        <h1 class="titre_page4">Some Projects 🎥</h1>
+
+        <article class="zone_slider">
+            <a href="#page_burn">
+                <img onclick="spawn_burn()" class="burn_img" src="ressource/burn_img.png">
+            </a>
+            <a href="#page_theatre">
+                <img onclick="spawn_theatre()" class="theatre_img" src="ressource/affiche_img.png">
+            </a>
+            <a href="#page_melies">
+                <img onclick="spawn_melies()" class="melies" src="ressource/melis_img.png">
+            </a>
+            <a href="#page_2048">
+                <img onclick="spawn_2048()" class="img_2048" src="ressource/2048_img.png">  
+            </a>  
+        </article>
+
+        <article id="page_burn">
+            <div id="zone_page_burn">
+                <p onclick="retour()" id="retour_burn">
+                    <a onclick="retour()" href="#page4">
+                        X
+                    </a>
+                </p>
+                <div id="zone_titre_page_burn">
+                    <h1 id="titre_page_burn">BURN</h1>
+                    <video autoplay loop muted id="video_burn">
+                        <source src="Ressource/burn_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="zone1_text_page_burn">
+                    <div>
+                        <h2 class="titre_general_burn">Role:</h2>
+                        <p class="text_general_burn">programmer, Designer</p>
+                    </div>
+
+                    <div>
+                        <h2 class="titre_general_burn">Date:</h2>
+                        <p class="text_general_burn">Mach 2020 - June 2020</p>
+                    </div>
+
+                    <div>
+                        <h2 class="titre_general_burn">Time:</h2>
+                        <p class="text_general_burn">1 Trimester</p>
+                    </div>
+
+                    <div>
+                        <h2 class="titre_general_burn">Language:</h2>
+                        <p class="text_general_burn">Python</p>
+                    </div>
+                </div>
+                <div id="zone2_text_page_burn">
+                    <div>
+                        <h2 class="titre_general_burn">Concept</h2>
+                        <br>
+                        <p class="text_general_burn">The goal of the game is to avoid fire balls falling from the top of the screen in a pixel art universe. The gamer has three lives and loses one each time a fire ball touches them.</p>
+                    
+                        <br><br>
+
+                        <h2 class="titre_general_burn">Development</h2>
+                        <br>
+                        <p class="text_general_burn">In my group, i had the rôle to realise the graphic part of the game, the scenery, the animations, the character and its movements.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="page_theatre">
+            <p onclick="retour()" class="retour" id="couleur_retour_theatre">
+                <a href="#page4">
+                    X
+                </a>
+            </p>
+            <div id="container_page_theatre">
+                <img id="img_page_theatre" src="ressource/affiche_img.png">
+                <div id="zone_text_page_theatre">
+                    <div id="zone_titre_page_theatre">
+                        <h2 id="titre_principal_theatre">theater poster</h2>
+                    </div>
+                    <div id="zone_text_flex_page_theatre">
+                        <div>
+                            <h2 class="titre_general_page_theatre">Role:</h2>
+                            <p class="text_general_page_theatre">Designer</p>
+                        </div>
+
+                        <div>
+                            <h2 class="titre_general_page_theatre">Date:</h2>
+                            <p class="text_general_page_theatre">2022</p>
+                        </div>
+
+                        <div>
+                            <h2 class="titre_general_page_theatre">Time:</h2>
+                            <p class="text_general_page_theatre">4 hours</p>
+                        </div>
+
+                        <div>
+                            <h2 class="titre_general_page_theatre">Software:</h2>
+                            <p class="text_general_page_theatre">Indesign</p>
+                        </div>
+                    </div>
+
+                    <div id="zone2_text_page_theatre">
+                        <div>
+                            <h2 class="titre_general_page_theatre">Concept</h2>
+                            <br>
+                            <p class="text_general_page_theatre">We had to create a poster to promote a fictive drama play based on a simple text without design.</p>
+                        
+                            <br><br>
+    
+                            <h2 class="titre_general_page_theatre">Development</h2>
+                            <br>
+                            <p class="text_general_page_theatre">I created the poster in its all, wether it is the coices of colors, disposition of the different elements or the aesthetic in general.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="page_melies">
+            <p onclick="retour()" class="retour">
+                <a href="#page4">
+                    X
+                </a>
+            </p>
+            <div id="container_page_melies">
+                <video width="1200" height="800" controls>
+                    <source src="Ressource/melies_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </article>
+
+        <article id="page_2048">
+            <p onclick="retour()" class="retour">
+                <a href="#page4">
+                    X
+                </a>
+            </p>
+
+            <div id="container_page_2048">
+                <img id="img_page_2048" src="ressource/2048_img.png"> 
+                <div id="zone_text_page_2048">
+                    <div id="zone_titre_principal_page_2048">
+                        <h2 id="titre_principal_2048">2048</h2>
+                    </div>
+
+                    <video autoplay loop muted id="video_jeu2048">
+                        <source src="Ressource/video_2048.mp4" type="video/mp4">
+                    </video>
+
+                    <div id="zone1_text_page_2048">
+                        <div>
+                            <h2 class="titre_general_2048">Role:</h2>
+                            <p class="text_general_2048">programmer, Designer</p>
+                        </div>
+    
+                        <div>
+                            <h2 class="titre_general_2048">Date:</h2>
+                            <p class="text_general_2048">December 2020 - March 2021</p>
+                        </div>
+    
+                        <div>
+                            <h2 class="titre_general_2048">Time:</h2>
+                            <p class="text_general_2048">1 Trimester</p>
+                        </div>
+    
+                        <div>
+                            <h2 class="titre_general_2048">Language:</h2>
+                            <p class="text_general_2048">Python</p>
+                        </div>
+                    </div>
+
+                    <div id="zone2_text_page_2048">
+                        <div>
+                            <h2 class="titre_general_2048">Concept</h2>
+                            <br>
+                            <p class="text_general_2048">The game 2048 is a mobile game which the goal is to slide tiles on a gate and combine the tiles with the same number to create a tile with the number 2048. The player can however continue to play after this goal is reached to obtain the highest score.</p>
+                        
+                            <br><br>
+    
+                            <h2 class="titre_general_2048">Developpement</h2>
+                            <br>
+                            <p class="text_general_2048">In my group, my task was to realise the graphic part of the game and to link the the console game to the graphic game.Dans mon groupe j’avais comme tâche de réaliser toute la partie graphique du jeu et de lier le jeu console au jeu graphique</p>
+                        </div>
+                    </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="page5">
+        <h1 class="titre_page5">I hesitate..🤔</h1>
+
+        <article id="container_page5">
+            <div class="zone_projet_pro_prog">
+                <div class="placement_text_projetpro">
+                    <h1 class="titre_projetpro">Full Stack developer</h1>
+                </div>
+
+            </div>
+
+            <div class="zone_projet_pro_com">
+                <div class="placement_text_projetpro">
+                    <h1 class="titre_projetpro">Motion Designer</h1>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+    <p id="copie_mail">matthisphan.pro@gmail.com</p>
+    <p id="copie_tel">0651325708</p>
+    
+    <footer>
+        <ul id="menu">
+            <a href="https://www.facebook.com/matthis.phan.9">
+                <li class="item_footer"><i class="fa-brands fa-facebook-square"></i></li>
+            </a>
+            <a href="https://www.instagram.com/matthisphan/?hl=fr">
+                <li class="item_footer"><i class="fa-brands fa-instagram"></i></li>
+            </a>
+
+            <li class="item_footer"><i onclick="copie_mail('#copie_mail')" class="fa-solid fa-envelope"></i></li>
+            
+            <li class="item_footer"><i onclick="copie_tel('#copie_tel')" class="fa-solid fa-phone"></i></li>
+        </ul>
+    </footer>
+
+    <script src="js/portefolio_index.js"></script>   
+</body>
+
+</html>
